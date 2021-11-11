@@ -8,8 +8,9 @@ django-qa is hosted on [Heroku][3], and is available at https://zachs-qa.herokua
 
 ## **License**
 
-MIT
+[MIT][4]
 
   [1]: https://stackoverflow.com/
   [2]: https://stackexchange.com/
   [3]: https://www.heroku.com/
+  [4]: LICENSE
