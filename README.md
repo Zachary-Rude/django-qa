@@ -1,10 +1,11 @@
-## Django QA Application
+# **Django Q&A Website**
 
-Live: [Demo](https://my-django-qa.herokuapp.com/)
+This is a simple Q&A website, written in Python with Django, and styled after [Stack Overflow][1] and every other Q&A site in the [Stack Exchange][2] Q&A network.
 
-Used Tech Stack
+## __Check it Out__
 
-1. Django
-2. Sqlite
+django-qa is hosted on [Heroku][3], and is available at https://zachs-qa.herokuapp.com/.
 
-Feel free to contribute.
+## **License**
+
+MIT
