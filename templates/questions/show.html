@@ -70,7 +70,7 @@
                                        class="btn btn-sm btn-outline-info">Edit</a>
                                 {% endif %}
                                 <div class="float-right">
-                                    <span class="text-muted">Asked By {{ question.created_at|timesince }} ago</span>
+                                    <span class="text-muted">Asked {{ question.created_at|timesince }} ago by</span>
                                     <div class="media mt-2">
                                         <a href="" class="pr-2">
                                             <img src="{{ "https://www.gravatar.com/avatar/{}?s=32" }}">
