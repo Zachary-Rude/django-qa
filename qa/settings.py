@@ -157,7 +157,7 @@ SIMPLE_JWT = {
 
 # cors config
 CORS_ORIGIN_ALLOW_ALL = True
-ALLOWED_HOSTS = ['my-django-qa.herokuapp.com', 'localhost', '*']
+ALLOWED_HOSTS = ['*']
 
 CORS_ALLOW_METHODS = (
     'DELETE',
