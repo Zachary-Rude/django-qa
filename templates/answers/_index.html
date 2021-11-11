@@ -3,32 +3,36 @@
         <div class="card">
             <div class="card-body">
                 <div class="card-title">
+                    {% if answers.count == 1 %}
+                    <h2>{{ answers.count }} answer</h2>
+                    {% else %}
                     <h2>{{ answers.count }} answers</h2>
+                    {% endif %}
                 </div>
                 <hr>
 
                 {% for answer in answers %}
                     <div class="media">
                         <div class="d-fex flex-column vote-controls">
-{#                            <a title="This answer is useful"#}
-{#                               class="vote-up">#}
-{#                                <i class="fas fa-caret-up fa-3x"></i>#}
-{#                            </a>#}
-{#                            <form id="up-vote-answer"#}
-{#                                  action="/answers/" method="POST" style="display:none;">#}
-{#                                <input type="hidden" name="vote" value="1">#}
-{#                            </form>#}
-{##}
-{#                            <span class="votes-count">2</span>#}
-{##}
-{#                            <a title="This answer is not useful"#}
-{#                               class="vote-down">#}
-{#                                <i class="fas fa-caret-down fa-3x"></i>#}
-{#                            </a>#}
-{#                            <form id="down-vote-answer-"#}
-{#                                  action="/answers//vote" method="POST" style="display:none;">#}
-{#                                <input type="hidden" name="vote" value="-1">#}
-{#                            </form>#}
+                            <a title="This answer is useful"
+                               class="vote-up">
+                                <i class="fas fa-caret-up fa-3x"></i>
+                            </a>
+                            <form id="up-vote-answer"
+                                  action="/answers/" method="POST" style="display:none;">
+                                <input type="hidden" name="vote" value="1">
+                            </form>
+
+                            <span class="votes-count">2</span>
+
+                            <a title="This answer is not useful"
+                               class="vote-down">
+                                <i class="fas fa-caret-down fa-3x"></i>
+                            </a>
+                            <form id="down-vote-answer-"
+                                  action="/answers//vote" method="POST" style="display:none;">
+                                <input type="hidden" name="vote" value="-1">
+                            </form>
                             {% if request.user == question.user and question.best_answer_id == null %}
                             <a title="Mark this answer as best answer" class="mt-2"
                                onclick="event.preventDefault(); document.getElementById('accept-answer-{{ answer.id }}').submit();"
